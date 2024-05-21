@@ -67,11 +67,5 @@
     </div>
 </div>
 </div>
-<script>
-    $(document).ready(function () {
-        $('#dt-nested-object').DataTable();
-    });
-  
-</script>
 
 @endSection

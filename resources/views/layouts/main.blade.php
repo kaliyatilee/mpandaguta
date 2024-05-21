@@ -341,6 +341,31 @@
         </div>
     </div>
 
+	<script>
+	$(document).ready(function() {
+    $('#dt-nested-object').DataTable({
+        dom: 'Bfrtip', 
+        buttons: [
+            {
+                extend: 'excel',
+                className: 'btn btn-success',
+                text: '<i class="fas fa-download"></i> Download Excel Report',
+                title: 'Your Title Here'
+            }
+        ]
+    });
+});
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.1.2/css/buttons.dataTables.min.css">
+<script type="text/javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js"></script> 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.3.1/js/buttons.html5.min.js"></script>
+
     <script type="f4c05bba83ecdbe432a0ba7a-text/javascript" src="../../js/jquery.min.js"></script>
     <script type="f4c05bba83ecdbe432a0ba7a-text/javascript" src="../../js/jquery-ui.min.js"></script>
     <script type="f4c05bba83ecdbe432a0ba7a-text/javascript" src="../../js/popper.min.js"></script>
