@@ -166,6 +166,7 @@
                                             <span class="pcoded-mtext">Dashboard</span>
                                         </a>
                                     </li>
+									@can('assignment-list')
                                     <li class="pcoded-hasmenu">
                                         <a href="javascript:void(0)" class="waves-effect waves-dark">
                                             <span class="pcoded-micon"><i class="feather icon-home"></i></span>
@@ -177,13 +178,17 @@
                                                     <span class="pcoded-mtext">Students</span>
                                                 </a>
                                             </li>
+											@can('role-list')
                                             <li class="">
                                                 <a href="{{'/new_students'}}" class="waves-effect waves-dark">
                                                     <span class="pcoded-mtext">Create New</span>
                                                 </a>
                                             </li>
+											@endcan
                                         </ul>
                                     </li>
+									@endcan
+									@can('role-list')
                                    <li class="pcoded-hasmenu">
                                         <a href="javascript:void(0)" class="waves-effect waves-dark">
                                             <span class="pcoded-micon"><i class="feather icon-sidebar"></i></span>
@@ -202,7 +207,8 @@
                                             </li>
                                         </ul>
                                     </li>
-
+									@endcan
+									@can('role-list')
 									<li class="pcoded-hasmenu">
                                         <a href="javascript:void(0)" class="waves-effect waves-dark">
                                             <span class="pcoded-micon"><i class="feather icon-sidebar"></i></span>
@@ -221,7 +227,8 @@
                                             </li>
                                         </ul>
                                     </li>
-
+									@endcan
+									@can('role-list')
                                     <li class="pcoded-hasmenu">
                                         <a href="javascript:void(0)" class="waves-effect waves-dark">
                                             <span class="pcoded-micon"><i class="feather icon-sidebar"></i></span>
@@ -233,6 +240,7 @@
                                                     <span class="pcoded-mtext">Testimonies</span>
                                                 </a>
                                             </li>
+
                                             <li class="">
                                                 <a href="{{'/new_testimonies'}}" class="waves-effect waves-dark">
                                                     <span class="pcoded-mtext">Create New</span>
@@ -240,6 +248,7 @@
                                             </li>
                                         </ul>
                                     </li> 
+									@endcan
 									<li class="pcoded-hasmenu">
                                         <a href="javascript:void(0)" class="waves-effect waves-dark">
                                             <span class="pcoded-micon"><i class="feather icon-sidebar"></i></span>
@@ -251,13 +260,16 @@
                                                     <span class="pcoded-mtext">Archivements</span>
                                                 </a>
                                             </li>
+											@can('role-list')
                                             <li class="">
                                                 <a href="{{'/new_archivement'}}" class="waves-effect waves-dark">
                                                     <span class="pcoded-mtext">Create New</span>
                                                 </a>
                                             </li>
+											@endcan
                                         </ul>
                                     </li>  
+									@can('role-list')
 									<li class="pcoded-hasmenu">
                                         <a href="javascript:void(0)" class="waves-effect waves-dark">
                                             <span class="pcoded-micon"><i class="feather icon-sidebar"></i></span>
@@ -276,6 +288,8 @@
                                             </li>
                                         </ul>
                                     </li>  
+									@endcan
+									@can('role-list')
 									<li class="pcoded-hasmenu">
                                         <a href="javascript:void(0)" class="waves-effect waves-dark">
                                             <span class="pcoded-micon"><i class="feather icon-sidebar"></i></span>
@@ -294,6 +308,47 @@
                                             </li>
                                         </ul>
                                     </li> 
+									@endcan
+									@can('role-list')
+									<li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="feather icon-sidebar"></i></span>
+                                            <span class="pcoded-mtext">Manage</span>
+                                        </a>
+                                        <ul class="pcoded-submenu">
+                                            <li class="">
+                                                <a href="{{ route('users.index') }}"  class="waves-effect waves-dark">
+                                                    <span class="pcoded-mtext">Users</span>
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a href="{{ route('roles.index') }}" class="waves-effect waves-dark">
+                                                    <span class="pcoded-mtext">Roles</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li> 
+									@endcan
+									@can('assignment-submission')
+									<li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="feather icon-sidebar"></i></span>
+                                            <span class="pcoded-mtext">Assignments</span>
+                                        </a>
+                                        <ul class="pcoded-submenu">
+                                            <li class="">
+                                                <a href="{{ route('users.index') }}"  class="waves-effect waves-dark">
+                                                    <span class="pcoded-mtext">Assignments</span>
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a href="{{ route('roles.index') }}" class="waves-effect waves-dark">
+                                                    <span class="pcoded-mtext">My submissions</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li> 
+									@endcan
                                 </ul>
 
                             </div>
