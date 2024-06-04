@@ -333,22 +333,53 @@
 									<li class="pcoded-hasmenu">
                                         <a href="javascript:void(0)" class="waves-effect waves-dark">
                                             <span class="pcoded-micon"><i class="feather icon-sidebar"></i></span>
-                                            <span class="pcoded-mtext">Assignments</span>
+                                            <span class="pcoded-mtext">Students</span>
                                         </a>
                                         <ul class="pcoded-submenu">
-                                            <li class="">
-                                                <a href="{{ route('users.index') }}"  class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">Assignments</span>
+										<li class="">
+                                                <a href="{{ route('student_assignments') }}"  class="waves-effect waves-dark">
+                                                    <span class="pcoded-mtext">Assignment</span>
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="{{ route('roles.index') }}" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">My submissions</span>
+                                                <a href="{{ route('submissions.create') }}"  class="waves-effect waves-dark">
+                                                    <span class="pcoded-mtext">Submit Assignment</span>
                                                 </a>
                                             </li>
+
+											<li class="">
+                                                <a href="{{ route('submissions.index') }}" class="waves-effect waves-dark">
+                                                    <span class="pcoded-mtext">Submissions</span>
+                                                </a>
+                                            </li>
+                                          
                                         </ul>
                                     </li> 
 									@endcan
+									@can('assignment-create')
+									<li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="feather icon-sidebar"></i></span>
+                                            <span class="pcoded-mtext">Teachers</span>
+                                        </a>
+                                        <ul class="pcoded-submenu">
+                                            <li class="">
+                                                <a href="{{ route('assignments.index') }}"  class="waves-effect waves-dark">
+                                                    <span class="pcoded-mtext">Assignments</span>
+                                                </a>
+                                            </li>
+
+											<li class="">
+                                                <a href="{{ route('teachers.submissions') }}"  class="waves-effect waves-dark">
+                                                    <span class="pcoded-mtext">Submitted Assignments</span>
+                                                </a>
+                                            </li>
+                                          
+                                        </ul>
+                                    </li> 
+									@endcan
+
+									
                                 </ul>
 
                             </div>

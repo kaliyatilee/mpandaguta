@@ -12,6 +12,8 @@ use App\Http\Controllers\IncomeController;
 use App\Http\Controllers\ExpensesController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\AssignmentController;
+use App\Http\Controllers\SubmissionController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -67,6 +69,17 @@ Route::middleware('auth')->group(function () {
 
 	Route::resource('roles', RoleController::class);
     Route::resource('users', UsersController::class);
+
+	Route::resource('assignments', AssignmentController::class);
+    Route::resource('submissions', SubmissionController::class);
+	Route::get('/teacher/submissions', [SubmissionController::class, 'teacherSubmissions'])->name('teachers.submissions');
+
+	Route::get('/submissions/create', [SubmissionController::class, 'create'])->name('submissions.create');
+	Route::post('/submissions', [SubmissionController::class, 'store'])->name('submissions.store');
+
+	Route::get('/assignments', [AssignmentController::class, 'index'])->name('assignments.index');
+	Route::get('/student/assignments', [AssignmentController::class, 'student_assignments'])->name('student_assignments');
+
 });
 
 require __DIR__.'/auth.php';
